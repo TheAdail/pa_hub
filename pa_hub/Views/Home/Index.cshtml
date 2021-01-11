@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "PA Central Hub";
+}
+
+<div class="container">
+    <div class="text-center">
+        <h1 class="display-4">Public Address Central Hub</h1>
+        <h4>Status: <span id="Status" style="font:bold">Disconnected</span></h4>
+    </div>
+
+    <div class="row">&nbsp;</div>
+    <div class="row">
+        <div class="col-2">Device ID</div>
+        <div class="col-4"><input type="text" id="DeviceId" /></div>
+    </div>
+    <div class="row">
+        <div class="col-2">Message</div>
+        <div class="col-4"><input type="text" id="Message" /></div>
+    </div>
+    <div class="row">&nbsp;</div>
+    <div class="row">
+        <div class="col-6">
+            <input type="button" id="SendButton" value="Send Message" />
+            &nbsp;&nbsp;&nbsp;
+            <input type="button" id="HeartbeatButton" value="Send Heartbeat" />
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <hr />
+    </div>
+</div>
+<div class="row">
+    <div class="col-6">
+        <h3>Client Devices</h3>
+        <ul id="MessagesList"></ul>
+    </div>
+
+    <div class="col-6">
+        <h3>Manager</h3>
+        <ul id="ManagerList"></ul>
+    </div>
+</div>
+<script src="~/js/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/central_hub.js"></script>
